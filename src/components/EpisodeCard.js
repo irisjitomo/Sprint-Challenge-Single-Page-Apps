@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'semantic-ui-react'
-import axios from 'axios';
 
-export default function LocationCard({ name, type, dimension, residents }) {
+export default function EpisodeList({ name, episode, airDate}) {
 
 	return (
-           
 
-    <Card>
+		<Card>
 
       <Card.Content>
         <Card.Header>{name}</Card.Header>
-        <Card.Meta>Residents: {residents.length}</Card.Meta>
         <Card.Description>
-         Type: {type}
+         {episode}
         </Card.Description>
         <Card.Description>
-         Dimension: {dimension}
+         Air Date: {airDate}
         </Card.Description>
       </Card.Content>
     </Card>
-  );
+	);
 }
